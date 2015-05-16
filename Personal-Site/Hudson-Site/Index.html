@@ -1,71 +1,109 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="Styles/ListStyles.css" />
-    <link rel="stylesheet" type="text/css" href="Styles/reset.css" />
-    <link href="Content/metro.min.css" type="text/css" rel="stylesheet">
-    <link href="Content/metro-icons.min.css" type="text/css" rel="stylesheet">
+    <title>I'm the man</title>
+    <link rel="shortcut icon" href="Images/V.jpg"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+
+    <link rel="stylesheet" type="text/css" href="Styles/ListStyles.css"/>
+    <link rel="stylesheet" type="text/css" href="Styles/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="Content/metro.min.css">
+    <link rel="stylesheet" type="text/css" href="Content/metro-icons.min.css">
+
     <script src="Scripts/jquery-2.1.3.min.js"></script>
     <script src="Scripts/handlebars-v3.0.3.js"></script>
     <script src="Scripts/metro.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 <body>
-<nav class="app-bar">
-    <a class="app-bar-element" href="Index.html"><span>Home</span></a>
-    <span class="app-bar-divider"></span>
-    <a class="app-bar-element" href="GrafDesign.html"><span>Graphic Design</span></a>
-    <span class="app-bar-divider"></span>
-    <a class="app-bar-element" href="Contacts.html"><span>CV</span></a>
-</nav>
-<aside class="cell place-right" style="width: 200px">
-    <div>
-        <h4>Social!?</h4>
-    </div>
-    <ul class="sidebar2" id="navitems">
-        <script id="entry-template" type="text/x-handlebars-template">
-                {{#each entry}}
-                <li>
-                    <a href="{{{url}}}">
-                        <span>{{name}}</span>
-                        <img src="images/{{pic}}" />
+    <div class="container">
+        <nav class="app-bar navigation">
+            <a class="app-bar-element" href="Index.html"><span>Home</span></a>
+            <span class="app-bar-divider"></span>
+            <a class="app-bar-element" href="GrafDesign.html"><span>Graphic Design</span></a>
+            <span class="app-bar-divider"></span>
+            <div class="inline-block place-right" id="navitems">
+                <script id="entry-template" type="text/x-handlebars-template">
+                    {{#each entry}}
+                    <a class="app-bar-element" href="{{{url}}}">
+                        <img class="icon" style="width:28px;" src="Images/{{pic}}" />
                     </a>
-                </li>
+                    {{/each}}
+                </script>
+            </div>
+            <script src="Scripts/Aside-JSON.js"></script>
+        </nav>
+
+        <div class="grid condensed main">
+            <div class="row cells12">
+                
+                <section class="presenter cell colspan9 inline-block set-border" id="news" data-role="presenter" data-width="82%" data-height="320px" data-scene-timeout="10000">
+                    <script id="news-template" type="text/x-handlebars-template">
+                        <section class="scene">
+                            {{#each newsEntry}}
+                            <article class="act {{titleColor}} {{fontColor}}">
+                                <img class="actor" data-position="10,10" src="Images-News/{{{image}}}" />
+                                <h1 class="actor" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" data-position="10,50">{{title}}</h1>
+                                <p class="actor" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; font-size:1.4em;  text-align: justify;" data-position="80,50">{{{content}}}</p>
+                            </article>
+                            {{/each}}
+                        </section>
+                    </script>
+                    <script src="Scripts/Home-News-JSON.js"></script>
+                </section>
+
+                <aside class="cell colspan2 place-right">
+                    <div class="image-container bordered" style="width: 200px">
+                        <div class="frame">
+                            <img src="Images/Valentin.jpg"/>
+                        </div>
+                        <iframe src="http://githubbadge.appspot.com/hudsonvsm?s=1" style="border: 0; height: 130px; width: 200px; overflow: hidden;"></iframe>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+
+        <section id="cvData">
+            <script id="cv-template" type="text/x-handlebars-template">
+                {{#each entry}}
+                <section class="panel" style="margin-top:2px">
+                    <header class="heading" style="padding:10px">
+                        <span class="icon mif-{{icon}}" style="line-height: normal;"></span>
+                        <span class="title">{{title}}</span>
+                    </header>
+                    <article class="content">
+                        <pre style="text-align: justify;">{{content}}</pre>
+                    </article>
+                </section>
                 {{/each}}
             </script>
-    </ul>
-    <script src="Scripts/Aside-JSON.js"></script>
-    <iframe src="http://githubbadge.appspot.com/hudsonvsm?s=1" style="border: 0; height: 130px; width: 200px; overflow: hidden;" frameborder="0"></iframe>
-    <br/>
-    <a href="http://stackoverflow.com/users/4890348/valentin-mladenov">
-        <img src="http://stackoverflow.com/users/flair/4890348.png" width="208" height="58" alt="profile for Valentin Mladenov at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Valentin Mladenov at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
-    </a>
-</aside>
-<section class="presenter data" id="news" data-role="presenter" data-width="70%" data-height="30%" data-scene-timeout="10000" style="margin: 30px;">
-    <script id="news-template" type="text/x-handlebars-template">
-            <section class="scene">
-                {{#each newsEntry}}
-                <article class="act {{titleColor}} {{fontColor}}">
-                    <img class="actor" data-position="10,10" src="Images-News/{{{image}}}" />
-                    <h1 class="actor" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;" data-position="10,200">{{title}}</h1>
-                    <p class="actor" style="text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; font-size:1.2em; text-align: justify;" data-position="80,200">{{{content}}}</p>
-                </article>
-                {{/each}}
-            </section>
-        </script>
-    <script src="Scripts/Home-News-JSON.js"></script>
-</section>
-<footer id="footer">
-    <ul class="horizontal-menu compact bg-dark">
-        <li>
-            <a class="fg-white">� 2015 Valentin's Web Page</a>
-        </li>
-        <li class="place-right fg-white">
-            <a class="mif-github" href="https://github.com/hudsonvsm/Projects"> Git Hub Source</a>
-        </li>
-    </ul>
-</footer>
+            <script src="Scripts/CV-Data-JSON.js"></script>
+        </section>
+
+        <footer>
+            <ul class="horizontal-menu compact bg-dark">
+                <li>
+                    <a class="fg-white">© 2015 Valentin's Web Page</a>
+                </li>
+                <li>
+                    <span class="tag info">SKILLS:</span>
+                    <span class="tag success">PHP</span>
+                    <span class="tag success">CSS</span>
+                    <span class="tag success">OOP</span>
+                    <span class="tag success">HTML</span>
+                    <span class="tag success">JavaScript</span>
+                    <span class="tag success">jQuery</span>
+                    <span class="tag success">T-SQL</span>
+                    <span class="tag success">C#</span>
+                    <span class="tag success">Entity Framework</span>
+                </li>
+                <li class="place-right fg-white">
+                    <a class="mif-github" href="https://github.com/hudsonvsm/Projects"> Git Hub Source</a>
+                </li>
+            </ul>
+        </footer>
+    </div>
 </body>
 </html>

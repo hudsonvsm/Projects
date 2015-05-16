@@ -1,77 +1,96 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="Styles/ListStyles.css" />
-    <link rel="stylesheet" type="text/css" href="Styles/reset.css" />
-    <link href="Content/metro.min.css" type="text/css" rel="stylesheet">
-    <link href="Content/metro-icons.min.css" type="text/css" rel="stylesheet">
+    <title>V's Graph Designs</title>
+    <link rel="shortcut icon" href="Images/V.jpg" />
+
+    <link rel="stylesheet" type="text/css" href="Styles/ListStyles.css"/>
+    <link rel="stylesheet" type="text/css" href="Styles/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="Content/metro.min.css">
+    <link rel="stylesheet" type="text/css" href="Content/metro-icons.min.css">
+
     <script src="Scripts/jquery-2.1.3.min.js"></script>
     <script src="Scripts/handlebars-v3.0.3.js"></script>
     <script src="Scripts/metro.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-</head>
-<body>
-<nav class="app-bar">
-    <a class="app-bar-element" href="Index.html"><span>Home</span></a>
-    <span class="app-bar-divider"></span>
-    <a class="app-bar-element" href="GrafDesign.html"><span>Graphic Design</span></a>
-    <span class="app-bar-divider"></span>
-    <a class="app-bar-element" href="Contacts.html"><span>CV</span></a>
-</nav>
-<aside class="cell place-right" style="width: 210px">
-    <div>
-        <h4 calss="bg-white">Social!?</h4>
-    </div>
-    <ul class="sidebar2" id="navitems">
-        <script id="entry-template" type="text/x-handlebars-template">
-            {{#each entry}}
-            <li>
-                <a href="{{{url}}}">
-                    <span>{{name}}</span>
-                    <img src="images/{{pic}}" />
-                </a>
-            </li>
-            {{/each}}
-        </script>
-    </ul>
-    <script src="Scripts/Aside-JSON.js"></script>
-    <iframe src="http://githubbadge.appspot.com/hudsonvsm?s=1" style="border: 0; height: 130px; width: 200px; overflow: hidden;" frameborder="0"></iframe>
-    <a href="http://stackoverflow.com/users/4890348/valentin-mladenov" style="display: block">
-        <img src="http://stackoverflow.com/users/flair/4890348.png" width="200" height="58" alt="profile for Valentin Mladenov at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Valentin Mladenov at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
-    </a>
-</aside>
 
-<section class="tile-container ribbed-lightBlue" id="grafDesign" style="margin-right: 210px">
-    <script id="graph-template" type="text/x-handlebars-template">
-            {{#each entryGraph}}
-            <div class="{{title}}">
-                <div class="tile-content">
-                    <div class="image-container">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+</head>
+<body class="container">
+        <nav class="app-bar navigation">
+            <a class="app-bar-element" href="Index.html"><span>Home</span></a>
+            <span class="app-bar-divider"></span>
+            <a class="app-bar-element" href="GrafDesign.html"><span>Graphic Design</span></a>
+            <span class="app-bar-divider"></span>
+            <div class="inline-block place-right" id="navitems">
+                <script id="entry-template" type="text/x-handlebars-template">
+                    {{#each entry}}
+                    <a class="app-bar-element" href="{{{url}}}">
+                        <img class="icon" style="width:28px;" src="Images/{{pic}}" />
+                    </a>
+                    {{/each}}
+                </script>
+            </div>
+            <script src="Scripts/Aside-JSON.js"></script>
+        </nav>
+
+        <div class="grid main">
+            <div class="row cells12">
+                <aside class="cell colspan2 place-right" style="width: 200px">
+                    <div class="image-container bordered" style="width: 200px">
                         <div class="frame">
-                            <img src="GraphImages/{{{imgName}}}" style="width: 100%; height: 100%; background-size: 100%; background-repeat: no-repeat;" />
-                        </div>
-                        <div class="image-overlay op-green text-small padding10">
-                            <h2>{{name}}</h2>
-                            <p>{{content}}</p>
+                            <img src="Images/Valentin.jpg" />
                         </div>
                     </div>
-                </div>
+                    <iframe src="http://githubbadge.appspot.com/hudsonvsm?s=1" style="border: 0; height: 130px; width: 200px; overflow: hidden;" frameborder="0"></iframe>
+                    <a href="http://stackoverflow.com/users/4890348/valentin-mladenov" style="display: block">
+                        <img src="http://stackoverflow.com/users/flair/4890348.png" width="200" height="58" alt="profile for Valentin Mladenov at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Valentin Mladenov at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+                    </a>
+                </aside>
+
+                <section class="tile-container cell colspan9 no-margin-left" id="grafDesign">
+                    <script id="graph-template" type="text/x-handlebars-template">
+                        {{#each entryGraph}}
+                        <div class="{{title}}">
+                            <div class="tile-content">
+                                <div class="image-container">
+                                    <div class="frame">
+                                        <img src="GraphImages/{{{imgName}}}" style="width: 100%; height: 100%; background-size: 100%; background-repeat: no-repeat;" />
+                                    </div>
+                                    <div class="image-overlay op-green text-small padding10">
+                                        <h2>{{name}}</h2>
+                                        <p>{{content}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </script>
+                    <script src="Scripts/GrafDesign-JSON.js"></script>
+                </section>
             </div>
-            {{/each}}
-        </script>
-    <script src="Scripts/GrafDesign-JSON.js"></script>
-</section>
-<footer id="footer">
-    <ul class="horizontal-menu compact bg-dark">
-        <li>
-            <a class="fg-white">© 2015 Valentin's Web Page</a>
-        </li>
-        <li class="place-right fg-white">
-            <a class="mif-github" href="https://github.com/hudsonvsm/Projects"> Git Hub Source</a>
-        </li>
-    </ul>
-</footer>
+        </div>
+        <footer>
+            <ul class="horizontal-menu compact bg-dark">
+                <li >
+                    <a class="fg-white">© 2015 Valentin's Web Page</a>
+                </li>
+                <li >
+                    <span class="tag info">SKILLS:</span>
+                    <span class="tag success">PHP</span>
+                    <span class="tag success">CSS</span>
+                    <span class="tag success">OOP</span>
+                    <span class="tag success">HTML</span>
+                    <span class="tag success">JavaScript</span>
+                    <span class="tag success">jQuery</span>
+                    <span class="tag success">T-SQL</span>
+                    <span class="tag success">C#</span>
+                    <span class="tag success">Entity Framework</span>
+                </li>
+                <li class="place-right fg-white">
+                    <a class="mif-github" href="https://github.com/hudsonvsm/Projects"> Git Hub Source</a>
+                </li>
+            </ul>
+        </footer>
 </body>
 </html>
