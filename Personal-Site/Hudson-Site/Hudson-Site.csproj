@@ -19,6 +19,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,16 +59,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Contacts.html" />
-    <Content Include="Content\metro-icons.css" />
     <Content Include="Content\metro-icons.min.css" />
-    <Content Include="Content\metro.css" />
     <Content Include="Content\metro.min.css" />
+    <Content Include="error404.html" />
     <Content Include="Fonts\metro.svg" />
     <Content Include="GrafDesign.html" />
     <Content Include="GraphImages\Coffee-Mate.png" />
     <Content Include="GraphImages\dodge_dart_fire_by_hudsonvsm-d4yv0f9.jpg" />
-    <Content Include="GraphImages\Earn%27n%27burn.png" />
+    <Content Include="GraphImages\EarnAndBurn.png" />
     <Content Include="GraphImages\Geotrakk.png" />
     <Content Include="GraphImages\IPSF-redisign.png" />
     <Content Include="GraphImages\kak-da-stroim-burzo.png" />
@@ -77,6 +77,7 @@
     <Content Include="GraphImages\YorkCorp.png" />
     <Content Include="Images-News\csharp.png" />
     <Content Include="Images-News\html-css-js.png" />
+    <Content Include="Images-News\php_mysql_logo.png" />
     <Content Include="Images-News\VisualStudio2013.png" />
     <Content Include="Images\Facebook.png" />
     <Content Include="Images\GitHub.png" />
@@ -88,20 +89,24 @@
     <Content Include="Fonts\metro.woff" />
     <Content Include="Fonts\metro.ttf" />
     <Content Include="Fonts\metro.eot" />
-    <None Include="Scripts\jquery-2.1.3.intellisense.js" />
+    <Content Include="roulete.html" />
     <Content Include="Scripts\Aside-JSON.js" />
     <Content Include="Scripts\CV-Data-JSON.js" />
+    <Content Include="Scripts\error404.js" />
     <Content Include="Scripts\GrafDesign-JSON.js" />
     <Content Include="Scripts\handlebars-v3.0.3.js" />
     <Content Include="Scripts\Home-News-JSON.js" />
-    <Content Include="Scripts\jquery-2.1.3.js" />
     <Content Include="Scripts\jquery-2.1.3.min.js" />
-    <Content Include="Scripts\jquery-2.1.3.min.map" />
     <Content Include="packages.config" />
     <None Include="Scripts\_references.js" />
-    <Content Include="Scripts\metro.js" />
     <Content Include="Scripts\metro.min.js" />
     <Content Include="Index.html" />
+    <Content Include="Scripts\noise_simplex.js" />
+    <Content Include="Scripts\npm.js" />
+    <Content Include="Scripts\roulete-calc.js" />
+    <Content Include="Scripts\snake.js" />
+    <Content Include="Scripts\svg.min.js" />
+    <Content Include="snake.html" />
     <Content Include="Styles\ListStyles.css" />
     <Content Include="Styles\reset.css" />
     <Content Include="Styles\reset.min.css">
