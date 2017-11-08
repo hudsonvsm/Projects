@@ -1,4 +1,4 @@
-﻿(function($) {
+(function($) {
     "use strict";
 
     var source = $("#graph-template").html(),
@@ -17,7 +17,7 @@
             { title: "tile-wide", name: "IPSF redisign", imgName: "IPSF-redisign.png", content: "Redisignig IPSF logo." },
             { title: "tile-wide", name: "Geotrakk", imgName: "GeoTrakk.png", content: "Logo design for Geo Trakk pharmaceutical company." },
             { title: "tile-wide", name: "Coffee Mate", imgName: "Coffee-Mate.png", content: "Article about coffee for magazine." },
-            { title: "tile-wide", name: "Dodge Dart Fire", imgName: "dodge_dart_fire_by_hudsonvsm-d4yv0f9.jpg", content: "DeviantArt Dodge Dart design chalenge." },
+            { title: "tile-wide", name: "Dodge Dart", imgName: "dodge_dart_fire_by_hudsonvsm-d4yv0f9.jpg", content: "DeviantArt Dodge Dart design chalenge." },
             { title: "tile-wide", name: "Book Cover", imgName: "Vulk.gif", content: "Sample book cover for book-publisher." },
             { title: "tile-wide", name: "Telephone Box cover", imgName: "Tel-Cover.png", content: "Sample telephone box cover." },
             { title: "tile-wide", name: "Photoshop", imgName: "kak-da-stroim-burzo.png", content: "Photoshoping a building to look taller." },

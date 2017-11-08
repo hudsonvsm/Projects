@@ -1,4 +1,4 @@
-﻿(function ($) {
+(function ($) {
     "use strict";
 
     var source = $("#cv-template").html(),
@@ -13,30 +13,37 @@
                                                 "Date of Birth:\t\t22.10.1978\r\n\r\n" +
                                                 "Mobility:\t\t\tClean Driving Licence (10 years)\r\n\r\n" +
                                                 "E-mail:\t\t\thudsonvsm@gmail.com\r\n" +
-                                                "Aditional Site:\t\tvalentinmladenov.wix.com/home\r\n" +
                                                 "Git:\t\t\t\tgithub.com/hudsonvsm\r\n",
                 icon: "profile"
             },
             {
-                title: "Education Summary", content: "Period:\t\t\t1993 - 1997\r\n" +
-                                                    "School:\t\t\tTechnical School of Electronics - Varna,\r\n" +
-                                                    "Major Subjects:        Electronics, English, Computers\r\n\r\n" +
-                                                    "Period:\t\t\t2011 - 2012\r\n" +
-                                                    "School:\t\t\tInformation Services AD - Varna\r\n" +
-                                                    '\t\t\t\t"Centre for Professional Training"\r\n' +
-                                                    "Professional aim:\tGraphic Designer\r\n\r\n" +
-                                                    "Period:\t\t\t2013 - I'm to graduate in 2015\r\n" +
+                title: "Education Summary", content:  "Period:\t\t\t2015 - To date\r\n" +
+                                                    'School:\t\t\t"Technical Institute" - Varna,\r\n' +
+                                                    "Major Subjects:        Computer Systems and Technologies\r\n" +
+                                                    "Professional aim:\tSoftware engineer\r\n\r\n" +
+                                                    "Period:\t\t\t2013 - 2015\r\n" +
                                                     'School:\t\t\t"Telerik Software Academy" - Sofia,\r\n' +
                                                     "Major Subjects:        C#, HTML, SQL, CSS, JS, OOP\r\n" +
                                                     "Professional aim:\tC# and Front-End developer\r\n\r\n" +
                                                     "Period:\t\t\t2014 - 2015\r\n" +
                                                     "School:\t\t\tInformation Services AD - Varna,\r\n" +
                                                     '\t\t\t\t"Info-Start Learning System"\r\n' +
-                                                    "Professional aim:\tNetwork and System Administrator",
+                                                    "Professional aim:\tNetwork and System Administrator\r\n\r\n" +
+                                                    "Period:\t\t\t2011 - 2012\r\n" +
+                                                    "School:\t\t\tInformation Services AD - Varna\r\n" +
+                                                    '\t\t\t\t"Centre for Professional Training"\r\n' +
+                                                    "Professional aim:\tGraphic Designer\r\n\r\n" +
+                                                    "Period:\t\t\t1993 - 1997\r\n" +
+                                                    "School:\t\t\tTechnical School of Electronics - Varna,\r\n" +
+                                                    "Major Subjects:        Electronics, English, Computers\r\n",
                 icon: "medal"
             },
             {
-                title: "Work Experience", content: "Period:\t\t\t2012 - to date\r\n" +
+                title: "Work Experience", content: "Period:\t\t\t2015 - to date\r\n" +
+                                                    "Company:                BGService LTD\r\n" +
+                                                    "Business sector:\tFull Stack Developer\r\n" +
+                                                    "Address:\t\t\t2A Ivan Sracimir str, Varna\r\n\r\n" +
+                                                    "Period:\t\t\t2012 - to date\r\n" +
                                                     "Company:                Freelance\r\n" +
                                                     "Business sector:\tGraphic Designer, C# and Front-End Developer\r\n" +
                                                     "Address:\t\t\t27 Seliolu street, Varna\r\n\r\n" +

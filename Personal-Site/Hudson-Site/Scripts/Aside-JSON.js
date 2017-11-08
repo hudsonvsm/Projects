@@ -1,4 +1,4 @@
-﻿(function($) {
+(function($) {
     "use strict";
 
     var source = $("#entry-template").html(),

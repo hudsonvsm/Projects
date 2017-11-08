@@ -1,11 +1,30 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>I'm the man</title>
-    <link rel="shortcut icon" href="Images/V.jpg"/>
-
+    <meta charset="utf-8" />
+    <meta name="msvalidate.01" content="021DD94975AA2EE3C0F457D5BE0F7CCF" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8"/>
+
+    <title>I'm the man</title>
+    <!--<link rel="shortcut icon" href="Images/V.jpg" />-->
+
+<link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="manifest" href="icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" type="text/css" href="Styles/ListStyles.css"/>
     <link rel="stylesheet" type="text/css" href="Styles/reset.css"/>
@@ -19,26 +38,31 @@
 <body>
     <div class="container">
         <nav class="app-bar navigation">
-            <a class="app-bar-element" href="Index.html"><span>Home</span></a>
+            <a class="app-bar-element" href="index.html"><span>Home</span></a>
             <span class="app-bar-divider"></span>
             <a class="app-bar-element" href="GrafDesign.html"><span>Graphic Design</span></a>
+            <span class="app-bar-divider"></span>
+            <a class="app-bar-element" href="error404.html"><span>ERROR 404</span></a>
+            <span class="app-bar-divider"></span>
+            <a class="app-bar-element" href="snake.html"><span>Snake</span></a>
+            <span class="app-bar-divider"></span>
+            <a class="app-bar-element" href="roulete.html"><span>Roulete Calc</span></a>
             <span class="app-bar-divider"></span>
             <div class="inline-block place-right" id="navitems">
                 <script id="entry-template" type="text/x-handlebars-template">
                     {{#each entry}}
-                    <a class="app-bar-element links-nav" href="{{{url}}}">
-                        <img class="icon" title="{{name}}" src="Images/{{pic}}" />
+                    <a class="app-bar-element links-nav" rel="nofollow" href="{{{url}}}">
+                        <img class="icon" src="Images/{{pic}}" />
                     </a>
                     {{/each}}
                 </script>
             </div>
             <script src="Scripts/Aside-JSON.js"></script>
         </nav>
-
         <div class="grid condensed main">
             <div class="row cells12">
                 
-                <section class="presenter cell colspan9 inline-block set-border" id="news" data-role="presenter" data-width="82%" data-height="320px" data-scene-timeout="10000">
+                <section class="presenter cell colspan9 inline-block set-border" id="news" data-role="presenter" data-width="calc(100% - 210px)" data-height="320px" data-scene-timeout="10000">
                     <script id="news-template" type="text/x-handlebars-template">
                         <section class="scene">
                             {{#each newsEntry}}
@@ -53,8 +77,8 @@
                     <script src="Scripts/Home-News-JSON.js"></script>
                 </section>
 
-                <aside class="cell colspan2 place-right">
-                    <div class="image-container bordered" style="width: 200px">
+                <aside class="cell colspan2 place-right" style="width:200px;">
+                    <div class="image-container bordered">
                         <div class="frame">
                             <img src="Images/Valentin.jpg"/>
                         </div>
@@ -85,7 +109,7 @@
         <footer>
             <ul class="horizontal-menu compact bg-dark">
                 <li>
-                    <a class="fg-white">© 2015 Valentin's Web Page</a>
+                    <a class="fg-white">&copy; 2015 Valentin's Web Page</a>
                 </li>
                 <li>
                     <span class="tag info">SKILLS:</span>

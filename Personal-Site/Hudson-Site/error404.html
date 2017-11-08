@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
 <head>
     <meta charset="utf-8" />
     <meta name="msvalidate.01" content="021DD94975AA2EE3C0F457D5BE0F7CCF" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>V's Graph Designs</title>
+    <title>V's 404 error page</title>
     <!--<link rel="shortcut icon" href="Images/V.jpg" />-->
 
 <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
@@ -28,9 +28,11 @@
 
     <link rel="stylesheet" type="text/css" href="Styles/ListStyles.css"/>
     <link rel="stylesheet" type="text/css" href="Styles/reset.css"/>
-    <link rel="stylesheet" type="text/css" href="Content/metro.min.css">
-    <link rel="stylesheet" type="text/css" href="Content/metro-icons.min.css">
+    <link href="Content/metro.min.css" type="text/css" rel="stylesheet"/>
+    <link href="Content/metro-icons.min.css" type="text/css" rel="stylesheet"/>
 
+    <script src="Scripts/svg.min.js"></script>
+    <script src="Scripts/noise_simplex.js"></script>
     <script src="Scripts/jquery-2.1.3.min.js"></script>
     <script src="Scripts/handlebars-v3.0.3.js"></script>
     <script src="Scripts/metro.min.js"></script>
@@ -50,8 +52,8 @@
             <div class="inline-block place-right" id="navitems">
                 <script id="entry-template" type="text/x-handlebars-template">
                     {{#each entry}}
-                    <a class="app-bar-element links-nav" rel="nofollow" href="{{{url}}}">
-                        <img class="icon" src="Images/{{pic}}" />
+                    <a class="app-bar-element links-nav" href="{{{url}}}">
+                        <img class="icon links-nav" title="{{name}}" src="Images/{{pic}}" />
                     </a>
                     {{/each}}
                 </script>
@@ -71,31 +73,21 @@
                     <a href="http://stackoverflow.com/users/4890348/valentin-mladenov" style="display: block">
                         <img src="http://stackoverflow.com/users/flair/4890348.png" width="200" height="58" alt="profile for Valentin Mladenov at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Valentin Mladenov at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
                     </a>
+                    <div>
+                        <div class="g-plusone place-left" data-size="tall" data-href="http://valentinmladenov.free.bg/"></div>
+                        <div class="fb-like place-right" data-href="http://valentinmladenov.free.bg" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                    </div>
                 </aside>
 
-                <section class="tile-container cell colspan9 no-margin-left" id="grafDesign">
-                    <script id="graph-template" type="text/x-handlebars-template">
-                        {{#each entryGraph}}
-                        <div class="{{title}}">
-                            <div class="tile-content">
-                                <div class="image-container">
-                                    <div class="frame">
-                                        <img src="GraphImages/{{{imgName}}}" style="width: 100%; height: 100%; background-size: 100%; background-repeat: no-repeat;" />
-                                    </div>
-                                    <div class="image-overlay op-green text-small padding10">
-                                        <h2>{{name}}</h2>
-                                        <p>{{content}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {{/each}}
-                    </script>
-                    <script src="Scripts/GrafDesign-JSON.js"></script>
+                <section class="tile-container cell colspan9 no-margin-left" id="error404">
+                    <div id="notfound" style="width: 580px; height: 293px;"></div>
+                    <script src="Scripts/error404.js"></script>
+
+                    <div class="alertify-notifier ajs-top ajs-right"></div>
                 </section>
             </div>
         </div>
-        <footer>
+        <footer class="footer">
             <ul class="horizontal-menu compact bg-dark">
                 <li >
                     <a class="fg-white">&copy; 2015 Valentin's Web Page</a>
@@ -112,10 +104,13 @@
                     <span class="tag success">C#</span>
                     <span class="tag success">Entity Framework</span>
                 </li>
+                <li>
+                    
+                </li>
                 <li class="place-right fg-white">
                     <a class="mif-github" href="https://github.com/hudsonvsm/Projects"> Git Hub Source</a>
                 </li>
             </ul>
         </footer>
 </body>
-</html>			
+</html>

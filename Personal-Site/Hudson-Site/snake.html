@@ -5,7 +5,7 @@
     <meta name="msvalidate.01" content="021DD94975AA2EE3C0F457D5BE0F7CCF" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>V's Graph Designs</title>
+    <title>V's Snake</title>
     <!--<link rel="shortcut icon" href="Images/V.jpg" />-->
 
 <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
@@ -26,8 +26,8 @@
 <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
-    <link rel="stylesheet" type="text/css" href="Styles/ListStyles.css"/>
-    <link rel="stylesheet" type="text/css" href="Styles/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="Styles/ListStyles.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/reset.css" />
     <link rel="stylesheet" type="text/css" href="Content/metro.min.css">
     <link rel="stylesheet" type="text/css" href="Content/metro-icons.min.css">
 
@@ -35,7 +35,8 @@
     <script src="Scripts/handlebars-v3.0.3.js"></script>
     <script src="Scripts/metro.min.js"></script>
 </head>
-<body class="container">
+<body>
+    <div class="container">
         <nav class="app-bar navigation">
             <a class="app-bar-element" href="index.html"><span>Home</span></a>
             <span class="app-bar-divider"></span>
@@ -59,48 +60,39 @@
             <script src="Scripts/Aside-JSON.js"></script>
         </nav>
 
-        <div class="grid main">
+        <div class="grid condensed main">
             <div class="row cells12">
-                <aside class="cell colspan2 place-right" style="width: 200px">
-                    <div class="image-container bordered" style="width: 200px">
+
+                <section class="cell colspan9 inline-block set-border bg-grayLighter" id="news" data-role="presenter" data-width="calc(100% - 210px)" data-height="400px" data-scene-timeout="10000">
+                   <div class="canvas-center">
+                    <h1>Play Snake Game</h1>
+                    <div id="msg"></div>
+                    <canvas id="playArea" width="450" height="300">Sorry your browser does not support HTML5</canvas>
+                    <script src="Scripts/snake.js"></script>
+                    <script>
+                        playGame();
+                    </script>
+                   </div>
+                </section>
+
+                <aside class="cell colspan2 place-right" style="width:200px;">
+                    <div class="image-container bordered">
                         <div class="frame">
                             <img src="Images/Valentin.jpg" />
                         </div>
+                        <iframe src="http://githubbadge.appspot.com/hudsonvsm?s=1" style="border: 0; height: 130px; width: 200px; overflow: hidden;"></iframe>
                     </div>
-                    <iframe src="http://githubbadge.appspot.com/hudsonvsm?s=1" style="border: 0; height: 130px; width: 200px; overflow: hidden;" frameborder="0"></iframe>
-                    <a href="http://stackoverflow.com/users/4890348/valentin-mladenov" style="display: block">
-                        <img src="http://stackoverflow.com/users/flair/4890348.png" width="200" height="58" alt="profile for Valentin Mladenov at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Valentin Mladenov at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
-                    </a>
                 </aside>
 
-                <section class="tile-container cell colspan9 no-margin-left" id="grafDesign">
-                    <script id="graph-template" type="text/x-handlebars-template">
-                        {{#each entryGraph}}
-                        <div class="{{title}}">
-                            <div class="tile-content">
-                                <div class="image-container">
-                                    <div class="frame">
-                                        <img src="GraphImages/{{{imgName}}}" style="width: 100%; height: 100%; background-size: 100%; background-repeat: no-repeat;" />
-                                    </div>
-                                    <div class="image-overlay op-green text-small padding10">
-                                        <h2>{{name}}</h2>
-                                        <p>{{content}}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {{/each}}
-                    </script>
-                    <script src="Scripts/GrafDesign-JSON.js"></script>
-                </section>
             </div>
         </div>
-        <footer>
+
+        <footer class="footer">
             <ul class="horizontal-menu compact bg-dark">
-                <li >
+                <li>
                     <a class="fg-white">&copy; 2015 Valentin's Web Page</a>
                 </li>
-                <li >
+                <li>
                     <span class="tag info">SKILLS:</span>
                     <span class="tag success">PHP</span>
                     <span class="tag success">CSS</span>
@@ -117,5 +109,6 @@
                 </li>
             </ul>
         </footer>
+    </div>
 </body>
-</html>			
+</html>	
